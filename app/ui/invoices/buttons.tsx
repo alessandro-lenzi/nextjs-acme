@@ -24,13 +24,13 @@ export function UpdateInvoice({ id }: { id: string }) {
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
-  const formAction = async (formData: FormData) => {
-    await deleteInvoice(formData);
-  };
+  const deleteInvoiceWithId = deleteInvoice.bind(null, id);
 
   return (
-    <form action={formAction}>
-      <input type="hidden" name="id" value={id} />
+    <form
+      action={
+        deleteInvoiceWithId as (formData: FormData) => void | Promise<void>
+      }>
       <button className="rounded-md border p-2 hover:bg-gray-100">
         <span className="sr-only">Delete</span>
         <TrashIcon className="w-5" />

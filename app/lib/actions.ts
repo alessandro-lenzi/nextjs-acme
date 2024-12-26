@@ -107,11 +107,7 @@ export async function updateInvoice(
   redirect('/dashboard/invoices');
 }
 
-export async function deleteInvoice(formData: FormData) {
-  const id = formData.get('id');
-  if (!id || typeof id !== 'string')
-    return { message: 'Invalid invoice: Failed to Delete Invoice.' };
-
+export async function deleteInvoice(id: string) {
   try {
     await sql`DELETE FROM invoices WHERE id = ${id}`;
     revalidatePath('/dashboard/invoices');
