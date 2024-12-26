@@ -1,6 +1,8 @@
 import { PencilIcon, PlusIcon, TrashIcon } from '@heroicons/react/24/outline';
 import Link from 'next/link';
-import { deleteInvoice } from '@/app/lib/actions';
+import { createInvoice, deleteInvoice } from '@/app/lib/actions';
+import { useFormState } from 'react-dom';
+import { useActionState } from 'react';
 
 export function CreateInvoice() {
   return (
@@ -24,10 +26,13 @@ export function UpdateInvoice({ id }: { id: string }) {
 }
 
 export function DeleteInvoice({ id }: { id: string }) {
-  const deleteInvoiceWithId = deleteInvoice.bind(null, id);
+  const formAction = async (formData: FormData) => {
+    await deleteInvoice(formData);
+  };
 
   return (
-    <form action={deleteInvoiceWithId}>
+    <form action={formAction}>
+      <input type="hidden" name="id" value={id} />
       <button className="rounded-md border p-2 hover:bg-gray-100">
         <span className="sr-only">Delete</span>
         <TrashIcon className="w-5" />
