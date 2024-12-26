@@ -1,12 +1,15 @@
-
 # Next.js - Acme Dashboard App
+
 This is a course on Next.js App Router! A free and interactive course, to learn the main features of Next.js by building a full-stack web application.
 
-This course is available at Next.js site: 
-https://nextjs.org/learn/dashboard-app
+[This course is available at Next.js site, click here to see.](https://nextjs.org/learn/dashboard-app)
 
 ## Productive version
+
 [Click here to see it in action](https://nextjs-acme-sigma.vercel.app/)
+
+> **User**: user@nextmail.com\
+> **Password**: 123456
 
 ## What we'll be building
 
@@ -24,6 +27,7 @@ The dashboard will also have an accompanying database, which you'll set up in a 
 By the end of the course, you'll have the essential skills needed to start building full-stack Next.js applications.
 
 ## Overview
+
 Here's an overview of features you'll learn about in this course:
 
 - Styling: The different ways to style your application in Next.js.
@@ -38,9 +42,11 @@ Here's an overview of features you'll learn about in this course:
 - Metadata: How to add metadata and prepare your application for social sharing.
 
 ## Prerequisite knowledge
+
 This course assumes you have a basic understanding of React and JavaScript. If you're new to React, we recommend going through our [React Foundations](https://nextjs.org/learn/react-foundations) course first to learn the fundamentals of React, such as components, props, state, and hooks, and newer features like Server Components and Suspense.
 
 ## System requirements
+
 Before you start this course, make sure your system meets the following requirements:
 
 - Node.js 18.18.0 or later installed.
